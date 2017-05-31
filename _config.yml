@@ -1,18 +1,18 @@
 # Permalinks
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
-#permalink:           pretty
+permalink:           pretty
 permalink: /blog/:year/:month/:day/:title/
-relative_permalinks: false
+relative_permalinks: true
 encoding: utf-8
 
 # Setup
-title:               My Website
+title:               NAPALM Automation
 #tagline:             'foo's website
-description:         Foo's blog...
-url: https://lanyon-plus.sbamin.com
+description:         NAPALM Automation
+url: https://napalm-automation.net
 baseurl: ""
-urlimg: https://lanyon-plus.sbamin.com/images/
+urlimg: https://napalm-automation.net/images/
 ## If you do not have custom domain, comment top three lines, uncomment three lines below and replace dyndna with your github userid and lanyon-plus with your project name. Also, rename CNAME file to CNAME.sample
 #url: https://dyndna.github.io/lanyon-plus
 #baseurl: "/lanyon-plus"
@@ -27,7 +27,7 @@ excerpt_separator: <!--more-->
 default_bg: sitebg.jpg
 default_logo: sitelogo.png
 safe: false
-#timezone:    America/Chicago
+timezone:    Europe/London
 future:      true
 
 
@@ -49,31 +49,31 @@ exclude: ["lib", "config.rb", "Gemfile", "Capfile", "Gemfile.lock", "config", "l
 
 # About/contact
 author:
-  name:              Foo Boo
-  url:               https://twitter.com/abcd
-  avatar:         foo.png
+  name:              NAPALM Automation
+  url:               https://twitter.com/napalm_auto
+  avatar:            foo.png
   #email:           
 
 # Owner/author information
 owner:
-  name:           Foo Boo
+  name:           NAPALM Automation
   avatar:         foo.png
   #email:          
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
   description:
   # Social networking links used in footer. Update and remove as you like.
-  twitter:        abcd
+  twitter:        napalm_auto
   facebook:       
-  github:         xyz123abc
+  github:         napalm-automation
   stackexchange:  
-  linkedin:       https://www.linkedin.com/in/foo
+  linkedin:
   instagram:      
   flickr:
   tumblr:  
-  google_plus:    https://plus.google.com/+foo
+  google_plus:
   # orcid and google scholar IDs are different than standard username.
-  orcid: xyz123abc
-  gscholar: xyz123abc
+  orcid:
+  gscholar:
 
 ## sidebar links:
 # For external links add external: true
@@ -107,12 +107,9 @@ links:
 #twitter_widget_id: xyz123abc
 
 # Add disqus username for Disqus comment board:
-disqus_shortname: foo
+# disqus_shortname: foo
 
 # Analytics and webmaster tools stuff goes here
 #google_analytics:   xyz123abc
 
-#### For dummy website only - remove if you wish ####
-github_repo: https://github.com/dyndna/lanyon-plus
-version: 1.1.1
 ## END ##
