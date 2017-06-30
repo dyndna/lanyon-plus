@@ -1,0 +1,21 @@
+---
+layout: content_right_sidebar
+---
+{{ content }}
+
+<!-- Pager v2 -->
+{% if page.previous or page.next %}
+<ul class="pager pager-v2 pager-md no-margin">
+  {% if page.previous %}
+  <li class="previous"><a href="{{ page.previous.url }}" title="{{ page.previous.title | markdownify | strip_html }}">&larr; Older</a></li>
+  {% endif %}
+
+  {% if page.next %}
+  <li class="next"><a href="{{ page.next.url }}" title="{{ page.next.title | markdownify | strip_html }}">Newer &rarr;</a></li>
+  {% endif %}
+</ul>
+{% endif %}
+
+
+
+<!-- End Pager v2 -->

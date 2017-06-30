@@ -1,0 +1,26 @@
+<meta name="description" content="{{ page.description }}" />
+<link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="{{ page.title }}" />
+<meta property="og:description" content="{{ page.description}}" />
+<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+<meta property="og:site_name" content="Napalm Network Automation" />
+{% for tag in page.tags %}
+<meta property="article:tag" content="{{ tag }}" />
+{% endfor %}
+{% for category in page.categories %}
+<meta property="article:section" content="{{ category }}" />
+{% endfor %}
+<meta property="article:published_time" content="{{ page.date }}" />
+{% if page.header.teaser %}
+  <meta property="og:image" content="{{ site.url }}{{ page.header.teaser }}" />
+{% endif %}
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@napalm_auto"/>
+<meta name="twitter:domain" content="napalm_auto"/>
+<meta name="twitter:creator" content="@napalm_auto"/>
+
+<link rel="alternate" type="application/rss+xml" title="Napalm Network Automation &raquo; Feed" href="{{ site.url }}/feed.xml" />

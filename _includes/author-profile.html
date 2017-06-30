@@ -1,0 +1,45 @@
+{% if page.author and site.data.authors[page.author] %}
+  {% assign author = site.data.authors[page.author] %}
+{% else %}
+  {% assign author = site.author %}
+{% endif %}
+
+<div class="headline-v2"><h2>{{ author.name }}</h2></div>
+<dl class="dl-horizontal">
+  <dt><img src="{{ author.avatar }}" alt="{{ author.name }}" /></dt>
+  <dd>
+    {% if author.uri %}
+    <p><a href="{{ author.uri }}" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Homepage">
+        <i class="fa fa-home"></i>
+       </a>
+    </p>
+    {% endif %}
+    {% if author.github %}
+    <p><a href="https://github.com/{{ author.github }}" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="GitHub">
+        <i class="fa fa-github"></i>
+       </a>
+    </p>
+    {% endif %}
+    {% if author.twitter %}
+    <p><a href="https://www.twitter.com/{{ author.twitter }}" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter">
+        <i class="fa fa-twitter"></i>
+       </a>
+    </p>
+    {% endif %}
+    {% if author.linkedin %}
+    <p><a href="https://www.linkedin.com/in/{{ author.linkedin }}" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Linkedin">
+        <i class="fa fa-linkedin"></i>
+       </a>
+    </p>
+    {% endif %}
+  </dd>
+</dl>
+
+<!-- Latest Links -->
+<ul class="list-unstyled blog-latest-posts margin-bottom-50">
+  <li>
+    <h3>About {{ author.name | split:" " | first }}</h3>
+    <p>{{ author.bio }}</p>
+  </li>
+</ul>
+<!-- End Latest Links -->
