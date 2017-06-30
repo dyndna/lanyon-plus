@@ -1,13 +1,15 @@
+---
 language: ruby
-cache: bundler
 rvm:
-  - 2.1.5
+- 2.2.5
 
-before_install:
-  - export NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+install:
+  - bundle install
+  - sudo pip install pytest
 
 script:
-  - bundle exec jekyll build
-
-notifications:
-  email: false
+  - jekyll build
+  - htmlproofer ./_site --allow-hash-href --internal-domains napalm-automation.net --http-status-ignore 999 --check-html
+  - cp _site-validation/site-validation.md _pages
+  - jekyll build
+  - pytest

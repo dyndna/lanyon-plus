@@ -1,0 +1,8 @@
+url: "https://napalm-automation.net/"
+
+analytics:
+  provider: false
+
+include:
+  - _pages
+  - _site-validation

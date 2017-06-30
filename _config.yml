@@ -1,118 +1,91 @@
-# Permalinks
-#
-# Use of `relative_permalinks` ensures post links from the index work properly.
-#permalink:           pretty
-permalink: /blog/:year/:month/:day/:title/
-relative_permalinks: false
-encoding: utf-8
+url: "https://napalm-automation.net/"
+name: Napalm Network Automation
+description: Open Source Network Automation
+repository: "napalm-automation/napalm-automation.github.io"
+permalink: /:title/
 
-# Setup
-title:               My Website
-#tagline:             'foo's website
-description:         Foo's blog...
-url: https://lanyon-plus.sbamin.com
-baseurl: ""
-urlimg: https://lanyon-plus.sbamin.com/images/
-## If you do not have custom domain, comment top three lines, uncomment three lines below and replace dyndna with your github userid and lanyon-plus with your project name. Also, rename CNAME file to CNAME.sample
-#url: https://dyndna.github.io/lanyon-plus
-#baseurl: "/lanyon-plus"
-#urlimg: https://dyndna.github.io/lanyon-plus/images/
-markdown: kramdown
-kramdown:
-  math_engine: mathjax
-
-paginate: 5
-paginate_path: "/blog/page:num"
-excerpt_separator: <!--more-->
-default_bg: sitebg.jpg
-default_logo: sitelogo.png
-safe: false
-#timezone:    America/Chicago
-future:      true
-
-
-## code highlight options
-syntax_highlighter: rouge
-input: GFM
-
-gems:
-  - github-pages
-  - font-awesome-sass
-  - jekyll-redirect-from
-  - jekyll-mentions
-
-jekyll-mentions:
-  base_url: https://twitter.com
-
-include: [".htaccess"]
-exclude: ["lib", "config.rb", "Gemfile", "Capfile", "Gemfile.lock", "config", "log", "Rakefile", "Rakefile.rb", "rakefile", "README.md", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "LICENSE", "vendor", "assets", "_plugins", "public/dormant"]
-
-# About/contact
+# Site Author
 author:
-  name:              Foo Boo
-  url:               https://twitter.com/abcd
-  avatar:         foo.png
-  #email:           
+  name             : "Napalm Automation"
+  github           : napalm-automation
 
-# Owner/author information
-owner:
-  name:           Foo Boo
-  avatar:         foo.png
-  #email:          
-  # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
-  description:
-  # Social networking links used in footer. Update and remove as you like.
-  twitter:        abcd
-  facebook:       
-  github:         xyz123abc
-  stackexchange:  
-  linkedin:       https://www.linkedin.com/in/foo
-  instagram:      
-  flickr:
-  tumblr:  
-  google_plus:    https://plus.google.com/+foo
-  # orcid and google scholar IDs are different than standard username.
-  orcid: xyz123abc
-  gscholar: xyz123abc
 
-## sidebar links:
-# For external links add external: true
-links:
-  - title: <i class="iconside iconm-home"></i> Home
-    url: /
-  - title: <i class="iconside iconm-user"></i> About
-    url: /about/
-  - title: <i class="iconside iconm-quill"></i> Blog
-    url: /blog/
-  - title: <i class="fa fa-tags"></i> Tags
-    url: /tags/
-  - title: <i class="fa fa-archive"></i> Archive
-    url: /archive/
-  - title: <i class="iconside iconm-wordpress"></i> Old Blog
-    url: https://foo.wordpress.com
-    external: true
-  - title: <i class="iconside iconm-envelop"></i> Contact
-    url: /contact/
-  - title: <i class="iconside iconm-twitter"></i> Twitter
-    url: https://twitter.com/abcd
-    external: true
-  - title: <i class="iconside iconm-feed2"></i> Feed
-    url: /feed.xml
 
-# Google Custom Search:
-#google_search: xyz123abc
+paginate: 10 # amount of posts to show
+paginate_path: /blog/page:num/
 
-# Twitter stream widget:
-# Replace xyz123abc with your twitter widget id from https://twitter.com/settings/widgets
-#twitter_widget_id: xyz123abc
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
 
-# Add disqus username for Disqus comment board:
-disqus_shortname: foo
+build:
+  prod: true
+  analytics: false
 
-# Analytics and webmaster tools stuff goes here
-#google_analytics:   xyz123abc
 
-#### For dummy website only - remove if you wish ####
-github_repo: https://github.com/dyndna/lanyon-plus
-version: 1.1.1
-## END ##
+encoding: "utf-8"
+
+defaults:
+  # _posts
+  - scope:
+      path: "_posts/announcements"
+      type: posts
+    values:
+      layout: post
+      read_time: false
+      comments: true
+
+  - scope:
+      path: "_posts/dbarrosop"
+      type: posts
+    values:
+      author: dbarrosop
+      layout: post
+      author_profile: true
+      read_time: false
+      comments: true
+      share: true
+
+  - scope:
+      path: "_posts/mirceaulinic"
+      type: posts
+    values:
+      author: mirceaulinic
+      layout: post
+      author_profile: true
+      read_time: false
+      comments: true
+      share: true
+
+
+
+collections:
+  dictionary:
+    output: true
+    permalink: /:collection/:path/
+
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+
+# Reading Files
+include:
+  - _pages
+
+exclude:
+  - .bundle
+  - Gemfile
+  - vendor
+  - tests/

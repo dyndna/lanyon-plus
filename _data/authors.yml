@@ -1,0 +1,18 @@
+
+dbarrosop:
+  name        : "David Barroso"
+  bio         : "Works at <a href='https://www.fastly.com/'>Fastly</a>"
+  avatar      : "/assets/napalm/dbarrosop-160x160.png"
+  uri         : "https://www.dravetech.com/"
+  github      : "dbarrosop"
+  twitter     : "dbarrosop"
+  linkedin    : "dbarrosop"
+
+
+mirceaulinic:
+  name        : "Mircea Ulinic"
+  bio         : "Works at <a href='https://www.cloudflare.com/'>Cloudflare</a>"
+  avatar      : "/assets/napalm/mirceaulinic-160x160.png"
+  github      : "mirceaulinic"
+  uri         : "https://mirceaulinic.net/"
+  twitter     : "mirceaulinic"

@@ -1,0 +1,19 @@
+{% if site.data.authors[post.author] %}
+  {% assign author = site.data.authors[post.author] %}
+{% else %}
+  {% assign author = site.author %}
+{% endif %}
+
+<!-- Blog Posts -->
+<div class="news-v3 bg-color-white margin-bottom-60">
+  <div class="news-v3-in">
+    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    <ul class="list-inline posted-info">
+      <li>By {{ author.name }}</li>
+      <li>Posted {{ post.date | date: '%B %d, %Y' }}</li>
+    </ul>
+    <p>{{ post.content | split:"<!--more-->" | first | strip_html }}</p>
+    <a href="{{ post.url }}"><button class="btn-u btn-u-orange" type="button">Read More</button></a>
+  </div>
+</div>
+<!-- End Blog Posts -->
